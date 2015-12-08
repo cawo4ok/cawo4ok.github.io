@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Travel modes in directions</title>
+    <title>Як доїхати до нашого корпусу?</title>
     <style>
       html, body {
         height: 100%;
@@ -33,10 +33,9 @@
     <div id="floating-panel">
     <b>Mode of Travel: </b>
     <select id="mode">
-      <option value="DRIVING">Driving</option>
-      <option value="WALKING">Walking</option>
-      <option value="BICYCLING">Bicycling</option>
-      <option value="TRANSIT">Transit</option>
+      <option value="DRIVING">Машиною</option>
+      <option value="WALKING">Власними двома</option>
+      <option value="TRANSIT">Громадським транспортом</option>
     </select>
     </div>
     <div id="map"></div>
@@ -60,7 +59,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
   directionsService.route({
     origin: {lat: 50.43, lng: 30.47},  // Haight.
-    destination: {lat: 50.449, lng: 30.465},  // Ocean Beach.
+    destination: {lat: 50.44922345, lng: 30.46535993},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
     // "property."
