@@ -38,9 +38,9 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      mmjsCountryCode = geoip_country_code();
+      var mmjsCountryCode = geoip_country_code();
       var infowindow = new google.maps.InfoWindow({
-    content: mmjsCountryCode
+    content: mmjsCountryCode;
   });
       var marker = new google.maps.Marker({
     position: pos,
