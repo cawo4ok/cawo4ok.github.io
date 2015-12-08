@@ -56,7 +56,7 @@ function initMap() {
   document.getElementById('mode').addEventListener('change', function() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   });
-}
+
 var pos;
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -75,7 +75,7 @@ if (navigator.geolocation) {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
-
+}
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
   directionsService.route({
