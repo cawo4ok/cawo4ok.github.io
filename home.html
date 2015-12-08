@@ -48,19 +48,19 @@ function initMap() {
     center: {lat: 50.43, lng: 30.47}
   });
   directionsDisplay.setMap(map);
-
-
-  calculateAndDisplayRoute(directionsService, directionsDisplay);
-  document.getElementById('mode').addEventListener('change', function() {
-    calculateAndDisplayRoute(directionsService, directionsDisplay);
-  });
-}
 function(position) {
       var pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
 };
+
+  calculateAndDisplayRoute(directionsService, directionsDisplay);
+  document.getElementById('mode').addEventListener('change', function() {
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+  });
+}
+
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
