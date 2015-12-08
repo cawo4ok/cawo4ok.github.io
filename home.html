@@ -81,7 +81,7 @@ var infoWindow = new google.maps.InfoWindow({map: map});
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
   directionsService.route({
-    pos:{pos.lat, pos.lng},  // Haight.
+    //pos:{pos.lat, pos.lng},  // Haight.
     destination: {lat: 50.44922345, lng: 30.46535993},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
