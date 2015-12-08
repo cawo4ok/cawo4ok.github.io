@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Як доїхати до нашого корпусу?</title>
+    <title>Як потрапити до нашого корпусу?</title>
     <style>
       html, body {
         height: 100%;
@@ -48,10 +48,7 @@ function initMap() {
     center: {lat: 50.43, lng: 30.47}
   });
   directionsDisplay.setMap(map);
-  var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
+
 
   calculateAndDisplayRoute(directionsService, directionsDisplay);
   document.getElementById('mode').addEventListener('change', function() {
@@ -62,7 +59,7 @@ function initMap() {
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
   directionsService.route({
-    pos,  // Haight.
+    pos:{lat: position.coords.latitude, lng: position.coords.longitude},  // Haight.
     destination: {lat: 50.44922345, lng: 30.46535993},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
